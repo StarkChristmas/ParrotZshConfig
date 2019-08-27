@@ -4,16 +4,16 @@
 
 
 ## 安装oh-my-zsh
-请确保已安装curl    
+请确保已安装curl
 
-```bash  
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 # 安装antigen
 * 请使用  Meslo LG M Regular for Powerline字体
 ```bash
-cd ~ && git clone https://github.com/CooChristmas/MacTerminalzsh.git && cd MacTerminalzsh && mv 安装antigen.zshrc ~/.zshrc && zsh
+cd ~ && git clone https://github.com/HexChristmas/MacTerminalzsh.git && cd MacTerminalzsh && mv installantigen.zshrc ~/.zshrc && zsh
 ```
 # 使用
 安装完成后 请执行
