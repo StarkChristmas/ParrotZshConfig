@@ -1,12 +1,29 @@
 # Antigen: https://github.com/zsh-users/antigen
 ANTIGEN="$HOME/.local/bin/antigen.zsh"
 # alias begin
-export http_proxy=socks5://127.0.0.1:1081 # 配置http访问的
-export https_proxy=socks5://127.0.0.1:1081 # 配置https
-export all_proxy=socks5://127.0.0.1:1:1081 # 配置http和https访问
+
+# proxyon
+proxyon() {
+    export https_proxy=http://127.0.0.1:1087
+    export http_proxy=http://127.0.0.1:1087
+    export all_proxy=socks5://127.0.0.1:1086
+    echo "HTTP/HTTPS Proxy on"
+}
+
+# proxyoff
+proxyoff() {
+    unset http_proxy
+    unset https_proxy
+    unset all_proxy
+    echo "HTTP/HTTPS Proxy off"
+}
+
 #alias git='git clone'
 alias rmrf='rm -rf'
-
+alias da='cd /Volumes/Data'
+alias pp='cd /Volumes/Data/git'
+alias awd='cd /Volumes/Data/attack'
+alias oo='cd /Volumes/Data/company/item'
 
 
 # Initialize command prompt
@@ -196,6 +213,5 @@ zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dl
 zstyle ':completion:*:*sh:*:' tag-order files
 
 
-export LSCOLORS=exfxcxdxbxexexxxxxxxxx #设置ls颜色 去除背景色
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
