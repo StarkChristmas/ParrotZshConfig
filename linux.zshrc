@@ -3,8 +3,35 @@ ANTIGEN="$HOME/.local/bin/antigen.zsh"
 # alias begin
 
 
-alias gc='git clone'
-alias mkidr='mkdir'
+# on
+on() {
+#    export https_proxy=http://127.0.0.1:1087
+#    export http_proxy=http://127.0.0.1:1087
+#    export all_proxy=socks5://127.0.0.1:1086
+    export https_proxy=http://127.0.0.1:7890
+    export http_proxy=http://127.0.0.1:7890
+    export all_proxy=socks5://127.0.0.1:7891
+    echo "HTTP/HTTPS Proxy on"
+}
+
+# down
+down() {
+    unset http_proxy
+    unset https_proxy
+    unset all_proxy
+    echo "HTTP/HTTPS Proxy off"
+}
+
+#alias
+alias da='cd /home/hacker/Data'
+alias oo='cd /home/hacker/Data/company/item'
+alias pp='cd /home/hacker/git'
+alias crack='cd /home/hacker/crack'
+alias work='cd /home/hacker/works'
+alias dirsearch='python3 /home/hacker/crack/initial_access/dir_fuzz/dirsearch/dirsearch.py'
+alias dirfuzz='python2 /home/hacker/crack/initial_access/dir_fuzz/dirfuzz/dirfuzz.py'
+alias gowork='cd /home/hacker/Documents/goproject/src'
+
 
 # Install antigen.zsh if not exist
 if [ ! -f "$ANTIGEN" ]; then
@@ -180,5 +207,3 @@ setopt HIST_VERIFY # Don't execute immediately upon history expansion.
 # ignore complition
 zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dll'
 zstyle ':completion:*:*sh:*:' tag-order files
-
-

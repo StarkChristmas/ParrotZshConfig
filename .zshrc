@@ -2,29 +2,34 @@
 ANTIGEN="$HOME/.local/bin/antigen.zsh"
 # alias begin
 
-# proxyon
-proxyon() {
-    export https_proxy=http://127.0.0.1:1087
-    export http_proxy=http://127.0.0.1:1087
-    export all_proxy=socks5://127.0.0.1:1086
+# on
+on() {
+#    export https_proxy=http://127.0.0.1:1087
+#    export http_proxy=http://127.0.0.1:1087
+#    export all_proxy=socks5://127.0.0.1:1086
+    export https_proxy=http://127.0.0.1:7890
+    export http_proxy=http://127.0.0.1:7890
+    export all_proxy=socks5://127.0.0.1:7891
     echo "HTTP/HTTPS Proxy on"
 }
 
-# proxyoff
-proxyoff() {
+# down
+down() {
     unset http_proxy
     unset https_proxy
     unset all_proxy
     echo "HTTP/HTTPS Proxy off"
 }
 
-#alias git='git clone'
-alias rmrf='rm -rf'
-alias da='cd /Volumes/Data'
+#alias
+alias da='cd /Volumes/Data/Data'
+alias oo='cd /Volumes/Data/Data/company/item'
 alias pp='cd /Volumes/Data/git'
-alias awd='cd /Volumes/Data/attack'
-alias oo='cd /Volumes/Data/company/item'
-
+alias crack='cd /Volumes/Data/crack'
+alias work='cd /Volumes/Data/works'
+alias dirsearch='python3 /Volumes/Data/crack/initial_access/dir_fuzz/dirsearch/dirsearch.py'
+alias dirfuzz='python2 /Volumes/Data/crack/initial_access/dir_fuzz/dirfuzz/dirfuzz.py'
+alias gowork='cd /Volumes/Data/Documents/goproject/src'
 
 # Initialize command prompt
 #export PS1="%n@%m:%~%# "
