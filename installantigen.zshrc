@@ -10,9 +10,9 @@ if [ ! -f "$ANTIGEN" ]; then
 	URL="http://git.io/antigen"
 	TMPFILE="/tmp/antigen.zsh"
 	if [ -x "$(which curl)" ]; then
-		curl -L "$URL" -o "$TMPFILE" 
+		curl -L "$URL" -o "$TMPFILE"
 	elif [ -x "$(which wget)" ]; then
-		wget "$URL" -O "$TMPFILE" 
+		wget "$URL" -O "$TMPFILE"
 	else
 		echo "ERROR: please install curl or wget before installation !!"
 		exit
